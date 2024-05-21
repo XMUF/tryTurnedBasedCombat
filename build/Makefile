@@ -522,6 +522,54 @@ demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/build
 .PHONY : demo/fast
 
+src/class.obj: src/class.cpp.obj
+.PHONY : src/class.obj
+
+# target to build an object file
+src/class.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/class.cpp.obj
+.PHONY : src/class.cpp.obj
+
+src/class.i: src/class.cpp.i
+.PHONY : src/class.i
+
+# target to preprocess a source file
+src/class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/class.cpp.i
+.PHONY : src/class.cpp.i
+
+src/class.s: src/class.cpp.s
+.PHONY : src/class.s
+
+# target to generate assembly for a file
+src/class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/class.cpp.s
+.PHONY : src/class.cpp.s
+
+src/gameRunning.obj: src/gameRunning.cpp.obj
+.PHONY : src/gameRunning.obj
+
+# target to build an object file
+src/gameRunning.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/gameRunning.cpp.obj
+.PHONY : src/gameRunning.cpp.obj
+
+src/gameRunning.i: src/gameRunning.cpp.i
+.PHONY : src/gameRunning.i
+
+# target to preprocess a source file
+src/gameRunning.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/gameRunning.cpp.i
+.PHONY : src/gameRunning.cpp.i
+
+src/gameRunning.s: src/gameRunning.cpp.s
+.PHONY : src/gameRunning.s
+
+# target to generate assembly for a file
+src/gameRunning.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo.dir\build.make CMakeFiles/demo.dir/src/gameRunning.cpp.s
+.PHONY : src/gameRunning.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -586,6 +634,12 @@ help:
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
 	@echo ... demo
+	@echo ... src/class.obj
+	@echo ... src/class.i
+	@echo ... src/class.s
+	@echo ... src/gameRunning.obj
+	@echo ... src/gameRunning.i
+	@echo ... src/gameRunning.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

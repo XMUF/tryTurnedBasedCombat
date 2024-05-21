@@ -68,10 +68,38 @@ include CMakeFiles/demo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/demo.dir/flags.make
 
+CMakeFiles/demo.dir/src/class.cpp.obj: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/class.cpp.obj: C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/class.cpp
+CMakeFiles/demo.dir/src/class.cpp.obj: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/src/class.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/src/class.cpp.obj -MF CMakeFiles\demo.dir\src\class.cpp.obj.d -o CMakeFiles\demo.dir\src\class.cpp.obj -c C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\class.cpp
+
+CMakeFiles/demo.dir/src/class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/class.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\class.cpp > CMakeFiles\demo.dir\src\class.cpp.i
+
+CMakeFiles/demo.dir/src/class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/class.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\class.cpp -o CMakeFiles\demo.dir\src\class.cpp.s
+
+CMakeFiles/demo.dir/src/gameRunning.cpp.obj: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/gameRunning.cpp.obj: C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/gameRunning.cpp
+CMakeFiles/demo.dir/src/gameRunning.cpp.obj: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo.dir/src/gameRunning.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/src/gameRunning.cpp.obj -MF CMakeFiles\demo.dir\src\gameRunning.cpp.obj.d -o CMakeFiles\demo.dir\src\gameRunning.cpp.obj -c C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\gameRunning.cpp
+
+CMakeFiles/demo.dir/src/gameRunning.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/gameRunning.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\gameRunning.cpp > CMakeFiles\demo.dir\src\gameRunning.cpp.i
+
+CMakeFiles/demo.dir/src/gameRunning.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/gameRunning.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\gameRunning.cpp -o CMakeFiles\demo.dir\src\gameRunning.cpp.s
+
 CMakeFiles/demo.dir/src/main.cpp.obj: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/main.cpp.obj: C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/main.cpp
 CMakeFiles/demo.dir/src/main.cpp.obj: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/src/main.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/src/main.cpp.obj -MF CMakeFiles\demo.dir\src\main.cpp.obj.d -o CMakeFiles\demo.dir\src\main.cpp.obj -c C:\Users\oldfish\Desktop\tryTurnedBasedCombat\src\main.cpp
 
 CMakeFiles/demo.dir/src/main.cpp.i: cmake_force
@@ -84,17 +112,21 @@ CMakeFiles/demo.dir/src/main.cpp.s: cmake_force
 
 # Object files for target demo
 demo_OBJECTS = \
+"CMakeFiles/demo.dir/src/class.cpp.obj" \
+"CMakeFiles/demo.dir/src/gameRunning.cpp.obj" \
 "CMakeFiles/demo.dir/src/main.cpp.obj"
 
 # External object files for target demo
 demo_EXTERNAL_OBJECTS =
 
+demo.exe: CMakeFiles/demo.dir/src/class.cpp.obj
+demo.exe: CMakeFiles/demo.dir/src/gameRunning.cpp.obj
 demo.exe: CMakeFiles/demo.dir/src/main.cpp.obj
 demo.exe: CMakeFiles/demo.dir/build.make
 demo.exe: CMakeFiles/demo.dir/linkLibs.rsp
 demo.exe: CMakeFiles/demo.dir/objects1.rsp
 demo.exe: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable demo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\oldfish\Desktop\tryTurnedBasedCombat\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable demo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\demo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
