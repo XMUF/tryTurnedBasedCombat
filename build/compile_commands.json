@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\src\\main.cpp.obj -c C:\\Users\\oldfish\\Desktop\\tryTurnedBasedCombat\\src\\main.cpp",
+  "file": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/main.cpp",
+  "output": "CMakeFiles/demo.dir/src/main.cpp.obj"
+}
+]
