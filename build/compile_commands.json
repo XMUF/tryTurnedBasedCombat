@@ -1,6 +1,18 @@
 [
 {
   "directory": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\src\\class.cpp.obj -c C:\\Users\\oldfish\\Desktop\\tryTurnedBasedCombat\\src\\class.cpp",
+  "file": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/class.cpp",
+  "output": "CMakeFiles/demo.dir/src/class.cpp.obj"
+},
+{
+  "directory": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\src\\gameRunning.cpp.obj -c C:\\Users\\oldfish\\Desktop\\tryTurnedBasedCombat\\src\\gameRunning.cpp",
+  "file": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/gameRunning.cpp",
+  "output": "CMakeFiles/demo.dir/src/gameRunning.cpp.obj"
+},
+{
+  "directory": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\demo.dir\\src\\main.cpp.obj -c C:\\Users\\oldfish\\Desktop\\tryTurnedBasedCombat\\src\\main.cpp",
   "file": "C:/Users/oldfish/Desktop/tryTurnedBasedCombat/src/main.cpp",
   "output": "CMakeFiles/demo.dir/src/main.cpp.obj"

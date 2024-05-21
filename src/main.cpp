@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "gameRunning.h"
 int main()
 {
-	printf("Hello world");
+	runSinglePlayer();
 	return 0;
 }
