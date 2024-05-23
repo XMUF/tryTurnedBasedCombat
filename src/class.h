@@ -1,25 +1,33 @@
+#include <string>
 namespace base
 {
     class basedClass
     {
     protected:
-        int HP;
-        int ATTACK;
-        int ARMOR;
-        int SPEED;
+        std::string NAME;
+        unsigned short int HP;
+        unsigned short int ATTACK;
+        unsigned short int ARMOR;
+        unsigned short int SPEED;
+        bool PlayerControl;
 
     public:
-        void setHP(int newHP);
-        int getHP();
+        void setNAME(std::string newNAME);
+        std::string getNAME();
 
-        void setATTACK(int newATTACK);
-        int getATTACK();
+        void setHP(unsigned short int newHP);
+        unsigned short int getHP();
 
-        void setARMOR(int newARMOR);
-        int getARMOR();
+        void setATTACK(unsigned short int newATTACK);
+        unsigned short int getATTACK();
 
-        void setSPEED(int newSPEED);
-        int getSPEED();
+        void setARMOR(unsigned short int newARMOR);
+        unsigned short int getARMOR();
+
+        void setSPEED(unsigned short int newSPEED);
+        unsigned short int getSPEED();
+
+        bool isPlayerControl();
     };
 }
 
@@ -28,17 +36,19 @@ namespace control
     class player : virtual public base::basedClass
     {
     protected:
-        bool isPlayerControl = true;
+
+
+    public:
     };
 
     class monster : virtual public base::basedClass
     {
     protected:
-        bool isPlayerControl = false;
+
+
+    public:
     };
 }
-
-
 
 namespace profession
 {
@@ -49,14 +59,14 @@ namespace profession
     class professionMage : virtual public base::basedClass
     {
     protected:
-        int MAGIC;
-        int MP;
+        unsigned short int MAGIC;
+        unsigned short int MP;
 
     public:
-        void setMAGIC(int newMAGIC);
-        int getMAGIC();
-        void setMP(int newMP);
-        int getMP();
+        void setMAGIC(unsigned short int newMAGIC);
+        unsigned short int getMAGIC();
+        void setMP(unsigned short int newMP);
+        unsigned short int getMP();
     };
 }
 
@@ -65,22 +75,24 @@ namespace finalCharcter
     class player_professionMelee : virtual public control::player, virtual public profession::professionMelee
     {
     public:
-        player_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED);
+        player_professionMelee(std::string newNAME,unsigned short int newHP, unsigned short int newATTACK, unsigned short int newARMOR, unsigned short int newSPEED);
     };
 
     class player_professionMage : virtual public control::player, virtual public profession::professionMage
     {
     public:
-        player_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED);
+        player_professionMage(std::string newNAME,unsigned short int newHP, unsigned short int newATTACK, unsigned short int newMAGIC, unsigned short int newMP, unsigned short int newARMOR, unsigned short int newSPEED);
     };
 
-    class monster_professionMelee:virtual public control::monster,virtual public profession::professionMelee{
-        public:
-        monster_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED);
+    class monster_professionMelee : virtual public control::monster, virtual public profession::professionMelee
+    {
+    public:
+        monster_professionMelee(std::string newNAME,unsigned short int newHP, unsigned short int newATTACK, unsigned short int newARMOR, unsigned short int newSPEED);
     };
 
-    class monster_professionMage:virtual public control::monster,virtual public profession::professionMage{
-        public:
-        monster_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED);
+    class monster_professionMage : virtual public control::monster, virtual public profession::professionMage
+    {
+    public:
+        monster_professionMage(std::string newNAME,unsigned short int newHP, unsigned short int newATTACK, unsigned short int newMAGIC, unsigned short int newMP, unsigned short int newARMOR, unsigned short int newSPEED);
     };
 }
