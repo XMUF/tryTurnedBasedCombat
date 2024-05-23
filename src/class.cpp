@@ -1,176 +1,120 @@
-// 从第117行开始才是使用的
-namespace base
+#include "class.h"
+
+void base::basedClass::setNAME(std::string newNAME)
 {
-    class basedClass
-    {
-    protected:
-        int HP;
-        int ATTACK;
-        int ARMOR;
-        int SPEED;
-
-    public:
-        void setHP(int newHP);
-        int getHP();
-
-        void setATTACK(int newATTACK);
-        int getATTACK();
-
-        void setARMOR(int newARMOR);
-        int getARMOR();
-
-        void setSPEED(int newSPEED);
-        int getSPEED();
-    };
-
-    void basedClass::setHP(int newHP)
-    {
-        this->HP = newHP;
-    }
-
-    int basedClass::getHP()
-    {
-        return this->HP;
-    }
-
-    void basedClass::setATTACK(int newATTACK)
-    {
-        this->ATTACK = newATTACK;
-    }
-
-    int basedClass::getATTACK()
-    {
-        return this->ATTACK;
-    }
-
-    void basedClass::setARMOR(int newARMOR)
-    {
-        this->ARMOR = newARMOR;
-    }
-
-    int basedClass::getARMOR()
-    {
-        return this->ARMOR;
-    }
-
-    void basedClass::setSPEED(int newSPEED)
-    {
-        this->SPEED = newSPEED;
-    }
-
-    int basedClass::getSPEED()
-    {
-        return this->SPEED;
-    }
+    this->NAME=newNAME;
 }
 
-namespace control
+std::string base::basedClass::getNAME()
 {
-    class player : virtual public base::basedClass
-    {
-    protected:
-        bool isPlayerControl = true;
-    };
-
-    class monster : virtual public base::basedClass
-    {
-    protected:
-        bool isPlayerControl = false;
-    };
+    return this->NAME;
 }
 
-namespace profession
+void base::basedClass::setHP(unsigned short int newHP)
 {
-    class professionMelee : virtual public base::basedClass
-    {
-    };
-
-    class professionMage : virtual public base::basedClass
-    {
-    protected:
-        int MAGIC;
-        int MP;
-
-    public:
-        void setMAGIC(int newMAGIC);
-        int getMAGIC();
-        void setMP(int newMP);
-        int getMP();
-    };
-    void professionMage::setMAGIC(int newMAGIC)
-    {
-        this->MAGIC = newMAGIC;
-    }
-    int professionMage::getMAGIC()
-    {
-        return this->MAGIC;
-    }
-    void professionMage::setMP(int newMP)
-    {
-        this->MP = newMP;
-    }
-    int professionMage::getMP()
-    {
-        return this->MP;
-    }
+    this->HP = newHP;
 }
 
-namespace finalCharcter
+unsigned short int base::basedClass::getHP()
 {
-    class player_professionMelee : virtual public control::player, virtual public profession::professionMelee
-    {
-    public:
-        player_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED);
-    };
+    return this->HP;
+}
 
-    class player_professionMage : virtual public control::player, virtual public profession::professionMage
-    {
-    public:
-        player_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED);
-    };
-    class monster_professionMelee : virtual public control::monster, virtual public profession::professionMelee
-    {
-    public:
-        monster_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED);
-    };
+void base::basedClass::setATTACK(unsigned short int newATTACK)
+{
+    this->ATTACK = newATTACK;
+}
 
-    class monster_professionMage : virtual public control::monster, virtual public profession::professionMage
-    {
-    public:
-        monster_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED);
-    };
+unsigned short int base::basedClass::getATTACK()
+{
+    return this->ATTACK;
+}
 
-    player_professionMelee::player_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED)
-    {
-        this->setHP(newHP);
-        this->setATTACK(newATTACK);
-        this->setARMOR(newARMOR);
-        this->setSPEED(newSPEED);
-    }
-    player_professionMage::player_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED)
-    {
-        this->setHP(newHP);
-        this->setATTACK(newATTACK);
-        this->setMAGIC(newMAGIC);
-        this->setMP(newMP);
-        this->setARMOR(newARMOR);
-        this->setSPEED(newSPEED);
-    }
+void base::basedClass::setARMOR(unsigned short int newARMOR)
+{
+    this->ARMOR = newARMOR;
+}
 
-    monster_professionMelee::monster_professionMelee(int newHP, int newATTACK, int newARMOR, int newSPEED)
-    {
-        this->setHP(newHP);
-        this->setATTACK(newATTACK);
-        this->setARMOR(newARMOR);
-        this->setSPEED(newSPEED);
-    }
-    monster_professionMage::monster_professionMage(int newHP, int newATTACK, int newMAGIC, int newMP, int newARMOR, int newSPEED)
-    {
-        this->setHP(newHP);
-        this->setATTACK(newATTACK);
-        this->setMAGIC(newMAGIC);
-        this->setMP(newMP);
-        this->setARMOR(newARMOR);
-        this->setSPEED(newSPEED);
-    }
+unsigned short int base::basedClass::getARMOR()
+{
+    return this->ARMOR;
+}
+
+void base::basedClass::setSPEED(unsigned short int newSPEED)
+{
+    this->SPEED = newSPEED;
+}
+
+unsigned short int base::basedClass::getSPEED()
+{
+    return this->SPEED;
+}
+
+bool base::basedClass::isPlayerControl()
+{
+    return this->PlayerControl;
+}
+
+void profession::professionMage::setMAGIC(unsigned short int newMAGIC)
+{
+    this->MAGIC = newMAGIC;
+}
+
+unsigned short int profession::professionMage::getMAGIC()
+{
+    return this->MAGIC;
+}
+
+void profession::professionMage::setMP(unsigned short int newMP)
+{
+    this->MP = newMP;
+}
+
+unsigned short int profession::professionMage::getMP()
+{
+    return this->MP;
+}
+
+finalCharcter::player_professionMelee::player_professionMelee(std::string newNAME, unsigned short int newHP, unsigned short int newATTACK, unsigned short int newARMOR, unsigned short int newSPEED)
+{
+    this->PlayerControl = true;
+    this->NAME = newNAME;
+    this->HP = newHP;
+    this->ATTACK = newATTACK;
+    this->ARMOR= newARMOR;
+    this->SPEED = newSPEED;
+}
+
+finalCharcter::player_professionMage::player_professionMage(std::string newNAME, unsigned short int newHP, unsigned short int newATTACK, unsigned short int newMAGIC, unsigned short int newMP, unsigned short int newARMOR, unsigned short int newSPEED)
+{
+    this->PlayerControl = true;
+    this->NAME = newNAME;
+    this->HP = newHP;
+    this->ATTACK = newATTACK;
+    this->ARMOR= newARMOR;
+    this->SPEED = newSPEED;
+    this->MAGIC = newMAGIC;
+    this->MP = newMP;
+}
+
+finalCharcter::monster_professionMelee::monster_professionMelee(std::string newNAME, unsigned short int newHP, unsigned short int newATTACK, unsigned short int newARMOR, unsigned short int newSPEED)
+{
+    this->PlayerControl = false;
+    this->NAME = newNAME;
+    this->HP = newHP;
+    this->ATTACK = newATTACK;
+    this->ARMOR= newARMOR;
+    this->SPEED = newSPEED;
+}
+
+finalCharcter::monster_professionMage::monster_professionMage(std::string newNAME, unsigned short int newHP, unsigned short int newATTACK, unsigned short int newMAGIC, unsigned short int newMP, unsigned short int newARMOR, unsigned short int newSPEED)
+{
+    this->PlayerControl = false;
+    this->NAME = newNAME;
+    this->HP = newHP;
+    this->ATTACK = newATTACK;
+    this->ARMOR= newARMOR;
+    this->SPEED = newSPEED;
+    this->MAGIC = newMAGIC;
+    this->MP = newMP;
 }
